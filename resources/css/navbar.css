@@ -1,0 +1,121 @@
+/* ===== NAVBAR BASE ===== */
+.custom-navbar {
+   background:linear-gradient(
+        180deg,
+        rgba(10,10,10,0.96),
+        rgba(20,20,20,0.92)
+    );
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border-right:1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 10px 0;
+    z-index: 999;
+}
+
+/* ===== LOGO ===== */
+.logo {
+    width: 46px;
+    height: 46px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* ===== BRAND TEXT ===== */
+.brand-text h5 {
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.brand-text small {
+    font-size: 0.7rem;
+}
+
+/* ===== NAV LINKS ===== */
+.nav-link {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-weight: 500;
+    position: relative;
+    padding: 8px 12px;
+    transition: 0.25s ease;
+}
+
+/* hover glow underline */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 12px;
+    bottom: 4px;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #4da3ff, #7c4dff);
+    transition: 0.3s ease;
+    border-radius: 10px;
+}
+
+.nav-link:hover {
+    color: #fff !important;
+    transform: translateY(-1px);
+}
+
+.nav-link:hover::after {
+    width: 60%;
+}
+
+/* active */
+.active-link {
+    color: #fff !important;
+}
+
+.active-link::after {
+    width: 60%;
+}
+
+/* ===== LOGIN BUTTON ===== */
+.login-btn {
+    background:linear-gradient( 90deg, #2563eb, #0f172a);
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: 0.25s ease;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.25);
+}
+
+/* ===== TOGGLER ===== */
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* ===== MOBILE MENU ===== */
+@media (max-width: 991px) {
+    .navbar-nav {
+        padding-top: 12px;
+        gap: 6px;
+    }
+
+    .login-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+.navbar {
+    height: 100px; /* or 70px */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+}
