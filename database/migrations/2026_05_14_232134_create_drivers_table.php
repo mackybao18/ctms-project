@@ -14,10 +14,10 @@ return new class extends Migration
     Schema::create('drivers', function (Blueprint $table) {
         $table->id();
 
-        $table->string('driver_id');
-        $table->string('first_name');
-        $table->string('middle_name')->nullable();
-        $table->string('last_name');
+        $table->string('drivers_id');
+        $table->string('firstname');
+        $table->string('middlename')->nullable();
+        $table->string('lastname');
 
         $table->string('height')->nullable();
         $table->string('weight')->nullable();
@@ -25,23 +25,22 @@ return new class extends Migration
         $table->string('civil_status');
         $table->string('religion');
 
-        $table->string('residence_address');
         $table->string('provincial_address');
+        $table->string('residence_address');
 
-        $table->string('toda');
-
-        $table->string('contact_number');
-
-        $table->string('license_number');
-        $table->date('expiration_date')->nullable();
+        $table->string('drivers_license_number');
+        $table->date('dl_expiration')->nullable();
 
         $table->string('emergency_person');
         $table->string('emergency_contact');
 
-        $table->string('profile')->nullable();
+        $table->string('contact_number');
+
+        $table->string('photo')->nullable();
+
+        $table->string('last_renewal')->nullable();
 
         $table->string('status')->default('Active');
-
         $table->timestamps();
     });
 }
