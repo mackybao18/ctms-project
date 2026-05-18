@@ -33,3 +33,5 @@ Route::get('/system', function () {
 // drivers module
 Route::get('/drivers', [DriverController::class, 'index'])->name('drivers.index');
 Route::post('/drivers/store', [DriverController::class, 'store'])->name('drivers.store');
+Route::put('/drivers/{driver}', [DriverController::class, 'update'])->name('drivers.update');
+Route::delete('/drivers/{driver}', [DriverController::class, 'destroy'])->name('drivers.destroy');

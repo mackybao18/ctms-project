@@ -1,37 +1,240 @@
-/* =========================
-   PAGE LAYOUT
-========================= */
-.drivers-page {
-    padding: 30px;
-    margin-top: 90px;
-    min-height: 100vh;
-    background: #f4f7fb;
+
+/* ===================================
+   TOOLBAR
+=================================== */
+
+.drivers-toolbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+    gap:20px;
+    flex-wrap:wrap;
 }
 
-/* =========================
-   HEADER
-========================= */
-.drivers-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
+.table-info{
+    display:none;
+}
+/* ===================================
+   SEARCH
+=================================== */
+
+.search-box{
+    position:relative;
+    width:340px;
 }
 
-.drivers-header h2 {
-    font-size: 32px;
-    font-weight: 700;
-    color: #111827;
+.search-box i{
+    position:absolute;
+    top:50%;
+    left:15px;
+    transform:translateY(-50%);
+    color:#6b7280;
 }
 
-.drivers-header p {
-    color: #6b7280;
-    font-size: 14px;
+.search-box input{
+    width:100%;
+    height:50px;
+    border:none;
+    outline:none;
+    padding:0 18px 0 45px;
+    border-radius:14px;
+    background:#fff;
+    box-shadow:0 4px 15px rgba(0,0,0,0.05);
+    font-size:14px;
 }
 
-/* =========================
-   BUTTON
-========================= */
+
+/* ===================================
+   FOOTER
+=================================== */
+.custom-footer {
+    background: #111827;
+    padding: 20px;
+}
+
+.btn-save {
+    background: #2563eb;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 12px;
+}
+
+.btn-cancel {
+    background: #1e293b;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 12px;
+}
+
+/* ===================================
+   TABLE WRAPPER
+=================================== */
+
+.table-wrapper{
+    background:#fff;
+    border-radius:22px;
+    padding:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.06);
+}
+
+/* ===================================
+   TABLE
+=================================== */
+
+.table-container{
+    overflow-x:hidden;
+}
+
+.drivers-table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:1400px;
+}
+
+.drivers-table thead{
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+}
+
+.drivers-table th{
+    padding:18px;
+    color:#fff;
+    font-size:14px;
+    font-weight:600;
+    white-space:nowrap;
+}
+
+.drivers-table td{
+    padding:18px;
+    border-bottom:1px solid #f1f5f9;
+    vertical-align:middle;
+    color:#374151;
+    font-size:14px;
+}
+
+.drivers-table tbody tr{
+    transition:0.3s;
+}
+
+.drivers-table tbody tr:hover{
+    background:#f8fafc;
+    transform:scale(1.002);
+}
+
+/* ===================================
+   DRIVER INFO
+=================================== */
+
+.driver-id{
+    background:#eff6ff;
+    color:#2563eb;
+    padding:6px 12px;
+    border-radius:50px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.driver-name{
+    display:flex;
+    flex-direction:column;
+}
+
+.driver-name strong{
+    color:#111827;
+    font-size:14px;
+}
+
+.driver-name small{
+    color:#6b7280;
+}
+
+/* ===================================
+   PROFILE
+=================================== */
+
+.table-profile{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #e5e7eb;
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* ===================================
+   ADDRESS
+=================================== */
+
+.address-cell{
+    max-width:220px;
+    line-height:1.5;
+}
+
+/* ===================================
+   EMERGENCY
+=================================== */
+
+.emergency-box{
+    display:flex;
+    flex-direction:column;
+}
+
+.emergency-box strong{
+    font-size:14px;
+    color:#111827;
+}
+
+.emergency-box small{
+    color:#6b7280;
+}
+
+/* ===================================
+   STATUS
+=================================== */
+
+.status-badge{
+    padding:8px 16px;
+    border-radius:50px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.status-badge.active{
+    background:#dcfce7;
+    color:#16a34a;
+}
+
+/* ===================================
+   ACTION BUTTONS
+=================================== */
+
+.action-buttons{
+    display:flex;
+    gap:10px;
+}
+
+.btn-action{
+    width:38px;
+    height:38px;
+    border:none;
+    border-radius:12px;
+    color:#fff;
+    transition:0.3s;
+}
+
+.btn-action:hover{
+    transform:translateY(-2px);
+}
+
+.btn-action.edit{
+    background:#2563eb;
+}
+
+.btn-action.delete{
+    background:#ef4444;
+}
+
+
 .btn-add {
     background: linear-gradient(135deg, #0f172a, #2563eb);
     color: #fff;
@@ -48,99 +251,10 @@
     transform: translateY(-3px);
 }
 
-/* =========================
-   SEARCH
-========================= */
-.search-box {
-    position: relative;
-    width: 320px;
-}
+/* modal */
 
-.search-box i {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-}
 
-.search-box input {
-    width: 100%;
-    padding: 12px 12px 12px 42px;
-    border-radius: 14px;
-    border: none;
-    outline: none;
-}
 
-/* =========================
-   TABLE
-========================= */
-.table-container {
-    background: #fff;
-    border-radius: 18px;
-     overflow-x:auto;
-}
-
-.drivers-table {
-    width: 100%;
-    border-collapse: collapse;
-    min-width:1400px;
-}
-
-.drivers-table thead {
-    background: #111827;
-    color: #fff;
-}
-
-.drivers-table th,
-.drivers-table td {
-    padding: 16px;
-}
-
-.table-profile{
-    width:45px;
-    height:45px;
-    border-radius:50%;
-    object-fit:cover;
-    border:2px solid #e5e7eb;
-}
-
-/* =========================
-   STATUS
-========================= */
-.status.active {
-    background: #dcfce7;
-    color: #16a34a;
-    padding: 6px 12px;
-    border-radius: 50px;
-}
-
-/* =========================
-   ACTION BUTTONS
-========================= */
-.action-buttons {
-    display: flex;
-    gap: 8px;
-}
-
-.btn-edit {
-    background: #2563eb;
-    color: #fff;
-    border: none;
-    padding: 8px 10px;
-    border-radius: 8px;
-}
-
-.btn-delete {
-    background: #ef4444;
-    color: #fff;
-    border: none;
-    padding: 8px 10px;
-    border-radius: 8px;
-}
-
-/* =========================
-   MODAL
-========================= */
 .custom-modal {
     background: #0f172a;
     border-radius: 24px;
@@ -163,26 +277,37 @@
 /* =========================
    UPLOAD
 ========================= */
-.upload-card {
-    border: 1px solid #ffffff;
-    padding: 20px;
-    border-radius: 18px;
-    text-align: center;
+.upload-card{
+    border:1px solid #ffffff;
+    padding:20px;
+    border-radius:18px;
+    text-align:center;
+    cursor:pointer;
+    transition:0.3s;
 }
 
-.profile-preview {
-    width: 120px;
-    height: 120px;
-    margin: auto;
-    border-radius: 50%;
-    background: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.upload-card:hover{
+    border-color:#2563eb;
+    transform:translateY(-3px);
+}
+
+.profile-preview{
+    width:200px;
+    height:200px;
+    margin:auto;
+    border-radius:50%;
+    background:#ffffff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
 }
 
 .upload-btn{
- color: #e5e7eb;
+    color:#e5e7eb;
+    display:block;
+    margin-top:12px;
+    cursor:pointer;
 }
 /* =========================
    FLOATING INPUT
@@ -204,62 +329,72 @@
 .floating-group label {
     position: absolute;
     left: 12px;
-    top: 18px;
+    top: 16px;
     font-size: 13px;
     color: #6b7280;
     transition: 0.2s;
+    pointer-events: none;
+    background: #fff;
+    padding: 0 4px;
 }
 
 .floating-group input:focus + label,
-.floating-group input:not(:placeholder-shown) + label {
+.floating-group input:not(:placeholder-shown) + label,
+.floating-group select:focus + label,
+.floating-group select:valid + label {
     top: 6px;
     font-size: 11px;
+    color: #a8a8a8;
+}
+/* emergency */
+.section-title{
+    color:#ffffff;
+    font-weight:600;
+    margin-bottom:4px;
 }
 
-/* =========================
-   FOOTER
-========================= */
-.custom-footer {
-    background: #111827;
-    padding: 20px;
+.section-sub{
+    color:#94a3b8;
+    font-size:14px;
 }
 
-.btn-save {
-    background: #2563eb;
-    color: #fff;
-    padding: 12px 20px;
-    border-radius: 12px;
+/* ===================================
+   PAGINATION
+=================================== */
+
+.pagination-wrapper{
+    margin-top:25px;
+    display:flex;
+    justify-content:flex-end;
 }
 
-.btn-cancel {
-    background: #1e293b;
-    color: #fff;
-    padding: 12px 20px;
-    border-radius: 12px;
+.pagination .page-link{
+    border:none;
+    margin:0 4px;
+    border-radius:10px !important;
+    color:#111827;
+    padding:10px 16px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.05);
 }
 
-/* =========================
+.pagination .active .page-link{
+    background:#2563eb;
+    color:#fff;
+}
+
+/* ===================================
    RESPONSIVE
-========================= */
-@media (max-width: 991px) {
-    .drivers-page {
-        margin-left: 0;
+=================================== */
+
+@media(max-width:768px){
+
+    .drivers-toolbar{
+        flex-direction:column;
+        align-items:stretch;
     }
 
-    .search-box {
-        width: 100%;
+    .search-box{
+        width:100%;
     }
-}
 
-/* =========================
-   EXTRA
-========================= */
-.section-title {
-    font-weight: 700;
-    color: #fff;
-}
-
-.section-sub {
-    color: #94a3b8;
-    margin-top: -5px;
 }
